@@ -1,0 +1,67 @@
+.team {
+  padding: 94px 0;
+  background-color: var(--team-background-color);
+  &__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.67;
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+  }
+  &__item {
+    padding-bottom: 30px;
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--primary-background-color);
+    box-shadow: var(--team-shadow-set);
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+  &__photo {
+    margin-bottom: 30px;
+  }
+  &__person {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+  }
+  &__position {
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    color: var(--secondary-text-color);
+  }
+  &__socials {
+    display: flex;
+    justify-content: center;
+  }
+  &__socials-item:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__socials-link {
+    display: flex;
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border-radius: 50%;
+    color: var(--svg-links-color);
+    transition: color var(--primary-transition-time) var(--primary-cubic-function),
+      background-color var(--primary-transition-time) var(--primary-cubic-function);
+    outline: transparent;
+    &:hover,
+    &:focus {
+      color: var(--primary-background-color);
+      background-color: var(--action-color);
+    }
+  }
+  &__socials-icon {
+    fill: currentColor;
+  }
+}
