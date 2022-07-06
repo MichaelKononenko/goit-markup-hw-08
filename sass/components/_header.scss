@@ -4,7 +4,14 @@
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  .container {
+  @media screen and (max-width: $mobile-width), screen and (min-width: $mobile-width) {
+    display: none;
+  }
+  @media screen and (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+  @media screen and (min-width: $desktop-width) {
     display: flex;
     align-items: center;
   }

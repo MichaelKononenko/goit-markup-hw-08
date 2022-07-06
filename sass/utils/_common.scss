@@ -14,6 +14,7 @@ a,
 img {
   text-decoration: none;
   display: block;
+  outline: 1px solid brown;
 }
 .list {
   list-style: none;
@@ -21,9 +22,24 @@ img {
   margin: 0;
 }
 .container {
-  width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+  @media screen and (max-width: $mobile-width) {
+    background-color: violet;
+    // display: block;
+  }
+  @media screen and (min-width: $mobile-width) {
+    background-color: green;
+    width: $mobile-width;
+  }
+  @media screen and (min-width: $tablet-width) {
+    background-color: gold;
+    width: $tablet-width;
+  }
+  @media screen and (min-width: $desktop-width) {
+    background-color: purple;
+    width: $desktop-width;
+  }
 }
 .button {
   padding: 0;

@@ -1,16 +1,13 @@
 .about {
   font-size: 14px;
   line-height: 1.14;
-  padding: 94px 0;
-  &__list {
-    display: flex;
-  }
+  padding: 60px 0;
   &__item:not(:last-child) {
     margin-right: 30px;
   }
   &__icon-wrapper {
     display: flex;
-    width: 270px;
+    width: calc(100vw - 30px);
     height: 120px;
     justify-content: center;
     align-items: center;
@@ -26,5 +23,23 @@
     font-size: 14px;
     line-height: 1.71;
     color: var(--secondary-text-color);
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+}
+@media screen and (min-width: $mobile-width) {
+}
+@media screen and (min-width: $tablet-width) {
+}
+@media screen and (min-width: $desktop-width) {
+  .about {
+    padding: 94px 0;
+  }
+  .about__icon-wrapper {
+    width: 270px;
+  }
+  .about__list {
+    display: flex;
   }
 }

@@ -1,4 +1,10 @@
 .gallery {
+  @media screen and (max-width: $mobile-width) {
+    display: none;
+  }
+  @media screen and (min-width: $mobile-width) {
+    display: none;
+  }
   padding-bottom: 94px;
   &__title {
     margin-bottom: 50px;
