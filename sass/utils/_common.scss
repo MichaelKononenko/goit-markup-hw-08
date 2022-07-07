@@ -10,10 +10,14 @@ body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
 }
-a,
-img {
+a {
   text-decoration: none;
   display: block;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
   outline: 1px solid brown;
 }
 .list {
@@ -21,26 +25,27 @@ img {
   padding: 0;
   margin: 0;
 }
+
 .container {
   padding: 0 15px;
   margin: 0 auto;
   @media screen and (max-width: $mobile-width) {
     background-color: violet;
-    // display: block;
   }
   @media screen and (min-width: $mobile-width) {
     background-color: green;
-    width: $mobile-width;
+    max-width: $mobile-width;
   }
   @media screen and (min-width: $tablet-width) {
     background-color: gold;
-    width: $tablet-width;
+    max-width: $tablet-width;
   }
   @media screen and (min-width: $desktop-width) {
     background-color: purple;
-    width: $desktop-width;
+    max-width: $desktop-width;
   }
 }
+
 .button {
   padding: 0;
   cursor: pointer;

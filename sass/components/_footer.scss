@@ -81,50 +81,57 @@
   }
 }
 
-.subscribe {
-}
-.subscribe__form {
-  display: flex;
-  align-items: flex-end;
-}
-.subscribe__title {
-  display: block;
-  font-size: 14px;
-  line-height: 1.14;
-  font-weight: 700;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-}
-.subscribe__label {
-  margin-right: 12px;
-}
 .subscribe__input {
-  color: var(--primary-background-color);
-  width: 358px;
+  width: 58px;
   height: 50px;
-  padding: 15px 16px;
-  border-radius: 4px;
-  border: var(--footer-mail-border);
-  filter: drop-shadow(var(--footer-mail-filter));
-  background-color: var(--footer-background-color);
 }
 .subscribe__button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 200px;
-  height: 50px;
-  border: none;
-  border-radius: 4px;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.67;
-  letter-spacing: 0.06em;
-  color: var(--primary-background-color);
-  background-color: var(--action-color);
-  box-shadow: var(--primary-box-shadow);
+  width: 50px;
 }
+@include desktop-min {
+  .subscribe__form {
+    display: flex;
+    align-items: flex-end;
+  }
+  .subscribe__title {
+    display: block;
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .subscribe__label {
+    margin-right: 12px;
+  }
+  .subscribe__input {
+    color: var(--primary-background-color);
+    width: 358px;
+    height: 50px;
+    padding: 15px 16px;
+    border-radius: 4px;
+    border: var(--footer-mail-border);
+    filter: drop-shadow(var(--footer-mail-filter));
+    background-color: var(--footer-background-color);
+  }
+  .subscribe__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.67;
+    letter-spacing: 0.06em;
+    color: var(--primary-background-color);
+    background-color: var(--action-color);
+    box-shadow: var(--primary-box-shadow);
+  }
 
-.subscribe__icon {
-  margin-left: 10px;
+  .subscribe__icon {
+    margin-left: 10px;
+  }
 }

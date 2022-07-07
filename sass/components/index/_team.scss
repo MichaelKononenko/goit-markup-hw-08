@@ -71,7 +71,7 @@
 }
 @media screen and (min-width: $tablet-width) {
 }
-@media screen and (min-width: $desktop-width) {
+@include desktop-min {
   .team {
     padding: 94px 0;
   }

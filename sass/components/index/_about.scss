@@ -32,7 +32,7 @@
 }
 @media screen and (min-width: $tablet-width) {
 }
-@media screen and (min-width: $desktop-width) {
+@include desktop-min {
   .about {
     padding: 94px 0;
   }
