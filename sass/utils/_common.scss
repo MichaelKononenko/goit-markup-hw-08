@@ -10,15 +10,17 @@ body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
 }
+.no-scroll {
+  overflow: hidden;
+}
 a {
   text-decoration: none;
   display: block;
 }
 img {
   display: block;
-  max-width: 100%;
   height: auto;
-  outline: 1px solid brown;
+  width: 100%;
 }
 .list {
   list-style: none;
@@ -29,11 +31,7 @@ img {
 .container {
   padding: 0 15px;
   margin: 0 auto;
-  @media screen and (max-width: $mobile-width) {
-    background-color: violet;
-  }
   @media screen and (min-width: $mobile-width) {
-    background-color: green;
     max-width: $mobile-width;
   }
   @media screen and (min-width: $tablet-width) {
@@ -53,8 +51,14 @@ img {
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
+  @media screen and (min-width: $tablet-width) {
+  }
+  @media screen and (min-width: $desktop-width) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 .visually-hidden {
   position: absolute;

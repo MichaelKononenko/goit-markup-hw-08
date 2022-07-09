@@ -13,6 +13,9 @@
     border-radius: 0px 0px 4px 4px;
     background-color: var(--primary-background-color);
     box-shadow: var(--team-shadow-set);
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
   &__photo {
     margin-bottom: 30px;
@@ -61,14 +64,10 @@
   }
 }
 
-.team__photo {
-  width: 100%;
-}
-
-@media screen and (max-width: $mobile-width) {
-}
-@media screen and (min-width: $mobile-width) {
-}
+// @media screen and (max-width: $mobile-width) {
+// }
+// @media screen and (min-width: $mobile-width) {
+// }
 @media screen and (min-width: $tablet-width) {
 }
 @include desktop-min {
