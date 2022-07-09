@@ -194,6 +194,7 @@ img {
   height: 100%;
   background-color: var(--primary-background-color);
   padding: 48px 25px;
+  overflow: scroll;
 }
 
 .site-nav__link {
