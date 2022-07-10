@@ -36,6 +36,17 @@
   background: transparent;
   border: none;
 }
+.menu-open-btn:hover,
+.menu-close-btn:hover,
+.menu-open-btn:focus,
+.menu-close-btn:focus {
+  color: var(--action-color);
+}
+.menu-close-btn__icon,
+.menu-open-btn__icon {
+  fill: currentColor;
+  transition: fill var(--primary-transition-time) var(--primary-cubic-function);
+}
 .header-menu {
   display: flex;
   flex-direction: column;
@@ -48,6 +59,14 @@
   background-color: var(--primary-background-color);
   padding: 48px 25px;
   overflow: scroll;
+  visibility: visible;
+  transform: translateY(0);
+  transition: transform var(--primary-transition-time) var(--primary-cubic-function);
+}
+.header-menu.is-hidden {
+  transform: translateY(-101%);
+  transition: transform var(--primary-transition-time) var(--primary-cubic-function),
+    opacity var(--primary-transition-time) var(--primary-cubic-function);
 }
 .site-nav__link {
   font-size: 40px;

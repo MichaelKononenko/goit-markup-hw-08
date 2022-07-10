@@ -2,11 +2,13 @@
   transform: translate(-50%, -50%) scale(0);
 }
 .modal {
+  overflow: scroll;
   position: fixed;
   left: 50%;
   top: 50%;
-  width: 528px;
-  height: 581px;
+  width: calc(100% - 30px);
+  height: 75%;
+  max-height: 609px;
   opacity: 1;
   visibility: visible;
   padding: 40px;
@@ -41,7 +43,7 @@
   &__title {
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     text-align: center;
     color: var(--primary-text-color);
   }
@@ -192,4 +194,20 @@
   line-height: 1.9;
   letter-spacing: 0.06em;
   margin-top: 30px;
+}
+
+@media screen and (max-width: $mobile-width) {
+}
+@media screen and (min-width: $mobile-width) {
+}
+@media screen and (min-width: $tablet-width) {
+}
+@media screen and (min-width: $desktop-width) {
+  .modal {
+    width: 528px;
+    height: 581px;
+  }
+  .modal__title {
+    line-height: 1.15;
+  }
 }
