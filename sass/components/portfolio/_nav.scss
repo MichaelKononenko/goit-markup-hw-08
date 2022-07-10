@@ -1,14 +1,10 @@
 .portfolio {
-  padding: 94px 0;
+  padding: 60px 0;
   &__nav {
     display: flex;
-    justify-content: center;
-    margin-bottom: 50px;
-  }
-  &__nav-item {
-    &:not(:last-child) {
-      margin-right: 8px;
-    }
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+    gap: 15px 8px;
   }
   &__button {
     padding: 6px 22px;
@@ -36,5 +32,21 @@
       background-color: var(--action-color);
       color: var(--primary-background-color);
     }
+  }
+}
+
+@media screen and (max-width: $mobile-width) {
+}
+@media screen and (min-width: $mobile-width) {
+}
+@media screen and (min-width: $tablet-width) {
+}
+@media screen and (min-width: $desktop-width) {
+  .portfolio {
+    padding: 94px 0;
+  }
+  .portfolio__nav {
+    justify-content: center;
+    margin-bottom: 50px;
   }
 }

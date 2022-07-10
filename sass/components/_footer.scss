@@ -39,7 +39,6 @@
   }
 }
 .join {
-  margin-right: auto;
   margin-bottom: 60px;
   &__title {
     display: block;
@@ -116,10 +115,24 @@
   margin-left: 10px;
 }
 @media screen and (min-width: $tablet-width) {
+  .address-join-wrapper {
+    display: flex;
+    justify-content: space-around;
+  }
+  .subscribe__input {
+    width: 450px;
+  }
 }
 @media screen and (min-width: $desktop-width) {
+  .footer {
+    text-align: left;
+  }
   .footer .container {
     display: flex;
+    align-items: baseline;
+  }
+  .address-join-wrapper {
+    margin-right: auto;
     align-items: baseline;
   }
   .address-wrapper {
@@ -127,6 +140,7 @@
     margin-bottom: 0;
   }
   .join {
+    margin-right: auto;
     margin-bottom: 0;
   }
   .subscribe__form {
@@ -138,6 +152,7 @@
   }
   .subscribe__input {
     width: 358px;
+    margin-bottom: 0;
   }
   .subscribe__button {
     margin: 0;
