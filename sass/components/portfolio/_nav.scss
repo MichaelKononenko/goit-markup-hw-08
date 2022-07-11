@@ -35,18 +35,16 @@
   }
 }
 
-@media screen and (max-width: $mobile-width) {
-}
-@media screen and (min-width: $mobile-width) {
-}
 @media screen and (min-width: $tablet-width) {
+  .portfolio__nav {
+    justify-content: center;
+  }
 }
 @media screen and (min-width: $desktop-width) {
   .portfolio {
     padding: 94px 0;
   }
   .portfolio__nav {
-    justify-content: center;
     margin-bottom: 50px;
   }
 }

@@ -82,13 +82,11 @@ img {
 }
 @media screen and (min-width: 768px) {
   .container {
-    background-color: gray;
     max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    background-color: purple;
     max-width: 1200px;
   }
 }
@@ -209,7 +207,6 @@ img {
   left: 0;
   z-index: 2;
   width: 100%;
-  max-width: 480px;
   height: 100%;
   background-color: var(--primary-background-color);
   padding: 48px 25px;
@@ -334,6 +331,10 @@ img {
   .menu-close-btn {
     display: none;
   }
+  .header nav {
+    margin-left: auto;
+    margin-right: auto;
+  }
   .site-nav {
     display: flex;
   }
@@ -363,15 +364,12 @@ img {
     border-radius: 2px;
   }
   .header-contacts {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin-left: auto;
+    flex-direction: column;
     margin-bottom: 0;
     margin-top: 0;
   }
-  .header-contacts__item:first-of-type {
-    margin-right: 50px;
+  .header-contacts__item:first-child {
+    margin-bottom: 10px;
   }
   .header-contacts__item:last-child {
     margin-bottom: 0;
@@ -379,6 +377,12 @@ img {
   .contacts__link.phone {
     font-size: inherit;
     line-height: inherit;
+  }
+  .email__icon--tablet,
+.phone__icon--tablet {
+    display: block;
+    fill: currentColor;
+    margin-right: 10px;
   }
   .header-socials {
     display: none;
@@ -392,13 +396,29 @@ img {
   .menu-open-btn {
     display: none;
   }
+  .header nav {
+    margin-left: 0;
+  }
+  .header-contacts {
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+  .header-contacts__item:first-of-type {
+    margin-right: 50px;
+  }
   .contacts__link.phone {
     font-size: inherit;
     line-height: inherit;
     margin-bottom: 0;
   }
-  .email__icon,
-.phone__icon {
+  .phone__icon--tablet,
+.email__icon--tablet {
+    display: none;
+  }
+  .email__icon--desktop,
+.phone__icon--desktop {
     display: block;
     fill: currentColor;
     margin-right: 10px;
@@ -691,17 +711,8 @@ img {
   }
 }
 .gallery {
+  display: none;
   padding-bottom: 94px;
-}
-@media screen and (max-width: 480px) {
-  .gallery {
-    display: none;
-  }
-}
-@media screen and (min-width: 480px) {
-  .gallery {
-    display: none;
-  }
 }
 .gallery__title {
   margin-bottom: 50px;
@@ -711,12 +722,10 @@ img {
 }
 .gallery__list {
   display: flex;
+  gap: 30px;
 }
 .gallery__item {
   position: relative;
-}
-.gallery__item:not(:last-child) {
-  margin-right: 30px;
 }
 .gallery__image {
   max-width: 100%;
@@ -737,6 +746,11 @@ img {
   background-color: var(--galery-overlay-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .gallery {
+    display: flex;
+  }
+}
 .team {
   padding: 60px 0;
   background-color: var(--team-background-color);
@@ -870,7 +884,7 @@ img {
   left: 50%;
   top: 50%;
   width: calc(100% - 30px);
-  height: 75%;
+  height: 85%;
   max-height: 609px;
   opacity: 1;
   visibility: visible;
@@ -1056,6 +1070,11 @@ img {
   margin-top: 30px;
 }
 
+@media screen and (min-width: 480px) {
+  .modal {
+    width: 450px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .modal {
     width: 528px;
@@ -1103,12 +1122,16 @@ img {
   color: var(--primary-background-color);
 }
 
+@media screen and (min-width: 768px) {
+  .portfolio__nav {
+    justify-content: center;
+  }
+}
 @media screen and (min-width: 1200px) {
   .portfolio {
     padding: 94px 0;
   }
   .portfolio__nav {
-    justify-content: center;
     margin-bottom: 50px;
   }
 }
@@ -1118,10 +1141,10 @@ img {
   gap: 30px;
 }
 .projects__item {
-  width: 100%;
   outline: 1px solid var(--projects-border-color);
 }
 .projects__link {
+  height: 100%;
   transition: box-shadow var(--primary-transition-time) var(--primary-cubic-function);
 }
 .projects__link:hover, .projects__link:focus {
@@ -1175,5 +1198,15 @@ img {
 @media screen and (min-width: 480px) {
   .projects__description {
     font-size: 18px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .projects__item {
+    width: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__item {
+    width: calc((100% - 60px) / 3);
   }
 }/*# sourceMappingURL=main.css.map */

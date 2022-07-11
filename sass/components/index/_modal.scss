@@ -7,7 +7,7 @@
   left: 50%;
   top: 50%;
   width: calc(100% - 30px);
-  height: 75%;
+  height: 85%;
   max-height: 609px;
   opacity: 1;
   visibility: visible;
@@ -196,11 +196,10 @@
   margin-top: 30px;
 }
 
-@media screen and (max-width: $mobile-width) {
-}
 @media screen and (min-width: $mobile-width) {
-}
-@media screen and (min-width: $tablet-width) {
+  .modal {
+    width: 450px;
+  }
 }
 @media screen and (min-width: $desktop-width) {
   .modal {

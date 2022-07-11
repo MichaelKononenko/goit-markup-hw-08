@@ -1,10 +1,5 @@
 .gallery {
-  @media screen and (max-width: $mobile-width) {
-    display: none;
-  }
-  @media screen and (min-width: $mobile-width) {
-    display: none;
-  }
+  display: none;
   padding-bottom: 94px;
   &__title {
     margin-bottom: 50px;
@@ -14,12 +9,10 @@
   }
   &__list {
     display: flex;
+    gap: 30px;
   }
   &__item {
     position: relative;
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
   }
   &__image {
     max-width: 100%;
@@ -38,5 +31,11 @@
     text-transform: uppercase;
     color: var(--primary-background-color);
     background-color: var(--galery-overlay-color);
+  }
+}
+
+@media screen and (min-width: $desktop-width) {
+  .gallery {
+    display: flex;
   }
 }

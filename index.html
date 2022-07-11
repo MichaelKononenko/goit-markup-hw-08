@@ -51,16 +51,22 @@
             <ul class="header-contacts list">
               <li class="header-contacts__item">
                 <a href="mailto:info@devstudio.com" class="contacts__link email">
-                  <svg class="email__icon" width="16" height="12">
+                  <svg class="email__icon email__icon--desktop" width="16" height="12">
                     <use href="./images/icons.svg#envelope"></use>
+                  </svg>
+                  <svg class="email__icon email__icon--tablet" width="14" height="10">
+                    <use href="./images/icons.svg#envelope-tablet"></use>
                   </svg>
                   info@devstudio.com</a
                 >
               </li>
               <li class="header-contacts__item">
                 <a href="tel:+380961111111" class="contacts__link phone">
-                  <svg class="phone__icon" width="10" height="16">
+                  <svg class="phone__icon phone__icon--desktop" width="10" height="16">
                     <use href="./images/icons.svg#smartphone"></use>
+                  </svg>
+                  <svg class="phone__icon phone__icon--tablet" width="10" height="14">
+                    <use href="./images/icons.svg#smartphone-tablet"></use>
                   </svg>
                   +38 096 111 11 11</a
                 >
@@ -149,7 +155,8 @@
           <ul class="gallery__list list">
             <li class="gallery__item">
               <img
-                src="./images/1.jpg"
+                srcset="./images/img1@1.jpg 1x, ./images/img1@2.jpg 2x"
+                src="./images/img1@1.jpg"
                 alt="Фото написания кода"
                 class="gallery__image"
                 width="370"
@@ -158,7 +165,8 @@
             </li>
             <li class="gallery__item">
               <img
-                src="./images/2.jpg"
+                srcset="./images/img2@1.jpg 1x, ./images/img2@2.jpg 2x"
+                src="./images/img2@1.jpg"
                 alt="Фото кросплатформенной оптимизации кода"
                 class="gallery__image"
                 width="370"
@@ -167,7 +175,8 @@
             </li>
             <li class="gallery__item">
               <img
-                src="./images/3.jpg"
+                srcset="./images/img3@1.jpg 1x, ./images/img3@2.jpg 2x"
+                src="./images/img3@1.jpg"
                 alt="Фото красочного продукта"
                 class="gallery__image"
                 width="370"
@@ -194,7 +203,7 @@
                 "
                 src="./images/igor-mobile.jpg"
                 alt="Игорь Демьяненко"
-                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 270px"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 450px"
               />
               <h3 class="team__person">Игорь Демьяненко</h3>
               <p class="team__position">Product Designer</p>
@@ -242,7 +251,7 @@
                 "
                 src="./images/olga-mobile.jpg"
                 alt="Игорь Демьяненко"
-                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 270px"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 450px"
               />
               <h3 class="team__person">Ольга Репина</h3>
               <p class="team__position">Frontend Developer</p>
@@ -290,7 +299,7 @@
                 "
                 src="./images/nikolay-mobile.jpg"
                 alt="Игорь Демьяненко"
-                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 270px"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 450px"
               />
               <h3 class="team__person">Николай Тарасов</h3>
               <p class="team__position">Marketing</p>
@@ -338,7 +347,7 @@
                 "
                 src="./images/mihail-mobile.jpg"
                 alt="Игорь Демьяненко"
-                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 270px"
+                sizes="(min-width: 1200px) 270px, (min-width: 768px) 354px, (min-width: 480px) 450px, 450px"
               />
               <h3 class="team__person">Михаил Ермаков</h3>
               <p class="team__position">UI Designer</p>
