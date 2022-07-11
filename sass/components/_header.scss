@@ -257,6 +257,9 @@
       margin-right: 50px;
     }
   }
+  .header-contacts__item:first-child {
+    margin-bottom: 0;
+  }
   .contacts__link.phone {
     font-size: inherit;
     line-height: inherit;
