@@ -210,7 +210,7 @@ img {
   height: 100%;
   background-color: var(--primary-background-color);
   padding: 48px 25px;
-  overflow: scroll;
+  overflow-y: scroll;
   visibility: visible;
   transform: translateY(0);
   transition: transform var(--primary-transition-time) var(--primary-cubic-function);
@@ -315,6 +315,7 @@ img {
     position: static;
     width: 100%;
     max-width: 100%;
+    overflow-y: hidden;
     height: 100%;
     background-color: var(--primary-background-color);
     padding: 0;
