@@ -310,6 +310,7 @@ img {
     line-height: 1.14;
   }
   .header-menu {
+    z-index: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -885,7 +886,7 @@ img {
 }
 
 .modal {
-  overflow: scroll;
+  overflow-y: scroll;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -1013,33 +1014,36 @@ img {
   line-height: 1.17;
 }
 
-.check:hover .check__icon--focus {
-  opacity: 1;
-}
-.check__input {
-  position: absolute;
-  bottom: 6px;
-  left: 10px;
-}
 .check__input:focus ~ .check__icon--focus {
-  opacity: 1;
+  display: block;
+}
+.check__input:hover ~ .check__icon--focus {
+  display: block;
+}
+.check__input:hover ~ .check__icon--disable {
+  display: none;
+}
+.check__input:focus ~ .check__icon--disable {
+  display: none;
 }
 .check__input:checked ~ .check__icon--active {
-  opacity: 1;
+  display: block;
+}
+.check__input:checked ~ .check__icon--focus {
+  display: none;
+}
+.check__input:checked ~ .check__icon--disable {
+  display: none;
 }
 .check__icon--disable {
-  opacity: 1;
+  display: block;
 }
 .check__icon--active {
-  position: absolute;
-  left: 11px;
-  opacity: 0;
+  display: none;
   transition: opacity var(--primary-transition-time) var(--primary-cubic-function);
 }
 .check__icon--focus {
-  position: absolute;
-  left: 11px;
-  opacity: 0;
+  display: none;
   transition: opacity var(--primary-transition-time) var(--primary-cubic-function);
 }
 
@@ -1083,6 +1087,7 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .modal {
+    overflow-y: hidden;
     width: 528px;
     height: 581px;
   }

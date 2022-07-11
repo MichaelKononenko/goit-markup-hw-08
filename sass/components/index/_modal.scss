@@ -2,7 +2,7 @@
   transform: translate(-50%, -50%) scale(0);
 }
 .modal {
-  overflow: scroll;
+  overflow-y: scroll;
   position: fixed;
   left: 50%;
   top: 50%;
@@ -134,33 +134,38 @@
   line-height: 1.17;
 }
 .check {
-  &:hover .check__icon--focus {
-    opacity: 1;
-  }
   &__input {
-    position: absolute;
-    bottom: 6px;
-    left: 10px;
     &:focus ~ .check__icon--focus {
-      opacity: 1;
+      display: block;
+    }
+    &:hover ~ .check__icon--focus {
+      display: block;
+    }
+    &:hover ~ .check__icon--disable {
+      display: none;
+    }
+    &:focus ~ .check__icon--disable {
+      display: none;
     }
     &:checked ~ .check__icon--active {
-      opacity: 1;
+      display: block;
+    }
+    &:checked ~ .check__icon--focus {
+      display: none;
+    }
+    &:checked ~ .check__icon--disable {
+      display: none;
     }
   }
   &__icon--disable {
-    opacity: 1;
+    display: block;
   }
   &__icon--active {
-    position: absolute;
-    left: 11px;
-    opacity: 0;
+    display: none;
     transition: opacity var(--primary-transition-time) var(--primary-cubic-function);
   }
   &__icon--focus {
-    position: absolute;
-    left: 11px;
-    opacity: 0;
+    display: none;
     transition: opacity var(--primary-transition-time) var(--primary-cubic-function);
   }
 }
@@ -203,6 +208,7 @@
 }
 @media screen and (min-width: $desktop-width) {
   .modal {
+    overflow-y: hidden;
     width: 528px;
     height: 581px;
   }
