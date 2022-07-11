@@ -1145,10 +1145,12 @@ img {
   gap: 30px;
 }
 .projects__item {
+  width: 100%;
   outline: 1px solid var(--projects-border-color);
 }
 .projects__link {
   height: 100%;
+  width: 100%;
   transition: box-shadow var(--primary-transition-time) var(--primary-cubic-function);
 }
 .projects__link:hover, .projects__link:focus {

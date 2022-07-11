@@ -3,10 +3,12 @@
   flex-wrap: wrap;
   gap: 30px;
   &__item {
+    width: 100%;
     outline: 1px solid var(--projects-border-color);
   }
   &__link {
     height: 100%;
+    width: 100%;
     transition: box-shadow var(--primary-transition-time) var(--primary-cubic-function);
     &:hover,
     &:focus {
