@@ -7,6 +7,8 @@
     outline: 1px solid var(--projects-border-color);
   }
   &__link {
+    display: flex;
+    flex-direction: column;
     height: 100%;
     width: 100%;
     transition: box-shadow var(--primary-transition-time) var(--primary-cubic-function);
@@ -26,22 +28,23 @@
   &__description-wrapper {
     display: flex;
     justify-content: center;
-    align-items: center;
     position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
+    overflow-y: scroll;
     transform: translateY(101%);
     transition: transform var(--primary-transition-time) var(--primary-cubic-function);
     background-color: var(--projects-overlay-color);
   }
   &__description {
     width: calc(100% - 48px);
-    font-size: 15px;
+    font-size: 18px;
     line-height: 1.56;
     color: var(--primary-background-color);
   }
   &__caption {
+    flex-grow: 1;
     padding: 20px 24px;
   }
   &__title {
@@ -63,13 +66,16 @@
 }
 
 @media screen and (min-width: $mobile-width) {
-  .projects__description {
-    font-size: 18px;
+  .projects__description-wrapper {
+    align-items: center;
   }
 }
 @media screen and (min-width: $tablet-width) {
   .projects__item {
     width: calc((100% - 30px) / 2);
+  }
+  .projects__description-wrapper {
+    overflow-y: hidden;
   }
 }
 @media screen and (min-width: $desktop-width) {

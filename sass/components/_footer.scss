@@ -12,10 +12,12 @@
 }
 .footer__logo {
   margin-bottom: 20px;
-  color: var(--action-color);
   &--second-part {
     color: var(--footer-text-color);
   }
+}
+.address-join-wrapper {
+  margin-bottom: 60px;
 }
 .address {
   display: block;
@@ -39,7 +41,6 @@
   }
 }
 .join {
-  margin-bottom: 60px;
   &__title {
     display: block;
     margin-bottom: 20px;
@@ -118,6 +119,13 @@
   .address-join-wrapper {
     display: flex;
     justify-content: space-around;
+    margin-bottom: 60px;
+  }
+  .address-wrapper {
+    margin-bottom: 0;
+  }
+  .join {
+    margin-bottom: 0;
   }
   .subscribe__input {
     width: 450px;
@@ -137,7 +145,6 @@
   }
   .address-wrapper {
     margin-right: 70px;
-    margin-bottom: 0;
   }
   .join {
     margin-right: auto;

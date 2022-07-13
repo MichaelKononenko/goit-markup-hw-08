@@ -65,7 +65,7 @@
     fill: currentColor;
   }
 }
-@include desktop-min {
+@media screen and (min-width: $desktop-width) {
   .team {
     padding: 94px 0;
   }

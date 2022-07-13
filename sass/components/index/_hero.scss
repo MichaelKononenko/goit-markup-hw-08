@@ -34,6 +34,7 @@
 .overlay {
   width: 100%;
   height: 400px;
+  max-width: 1600px;
   background-image: linear-gradient(to top, var(--hero-overlay-color), var(--hero-overlay-color)),
     url(../images/mobile-bg@1.jpg);
   background-repeat: no-repeat;

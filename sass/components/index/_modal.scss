@@ -42,7 +42,7 @@
   }
   &__title {
     font-weight: 700;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 1.5;
     text-align: center;
     color: var(--primary-text-color);
@@ -204,6 +204,9 @@
 @media screen and (min-width: $mobile-width) {
   .modal {
     width: 450px;
+  }
+  .modal__title {
+    font-size: 20px;
   }
 }
 @media screen and (min-width: $desktop-width) {
