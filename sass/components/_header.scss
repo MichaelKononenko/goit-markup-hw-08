@@ -1,3 +1,6 @@
+.header {
+  border-bottom: 1px solid var(--header-border-color);
+}
 .header .container {
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -141,14 +144,14 @@
   }
 }
 @media screen and (min-width: $tablet-width) {
-  .header {
-    border-bottom: 1px solid var(--header-border-color);
-  }
   .header .container {
     display: flex;
     align-items: center;
     font-size: 14px;
     line-height: 1.14;
+  }
+  .header__logo {
+    padding: 24px 0;
   }
   .header-menu {
     position: static;
@@ -207,6 +210,7 @@
     border-radius: 2px;
   }
   .header-contacts {
+    font-size: 12px;
     flex-direction: column;
     margin-bottom: 0;
     margin-top: 0;
@@ -251,7 +255,6 @@
 }
 @media screen and (min-width: $desktop-width) {
   .header__logo {
-    padding: 24px 0;
     margin-right: 93px;
   }
   .menu-open-btn {

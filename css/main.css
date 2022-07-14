@@ -140,6 +140,10 @@ img {
   pointer-events: none;
 }
 
+.header {
+  border-bottom: 1px solid var(--header-border-color);
+}
+
 .header .container {
   font-weight: 500;
   letter-spacing: 0.02em;
@@ -297,14 +301,14 @@ img {
   }
 }
 @media screen and (min-width: 768px) {
-  .header {
-    border-bottom: 1px solid var(--header-border-color);
-  }
   .header .container {
     display: flex;
     align-items: center;
     font-size: 14px;
     line-height: 1.14;
+  }
+  .header__logo {
+    padding: 24px 0;
   }
   .header-menu {
     position: static;
@@ -363,6 +367,7 @@ img {
     border-radius: 2px;
   }
   .header-contacts {
+    font-size: 12px;
     flex-direction: column;
     margin-bottom: 0;
     margin-top: 0;
@@ -405,7 +410,6 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .header__logo {
-    padding: 24px 0;
     margin-right: 93px;
   }
   .menu-open-btn {
