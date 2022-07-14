@@ -64,13 +64,15 @@
   padding: 48px 25px;
   overflow-y: scroll;
   visibility: visible;
+  opacity: 1;
   transform: translateY(0);
   transition: transform var(--primary-transition-time) var(--primary-cubic-function);
 }
 .header-menu.is-hidden {
+  visibility: hidden;
   transform: translateY(-101%);
   transition: transform var(--primary-transition-time) var(--primary-cubic-function),
-    opacity var(--primary-transition-time) var(--primary-cubic-function);
+    visibility var(--primary-transition-time) var(--primary-cubic-function);
 }
 .site-nav__link {
   font-size: 40px;
@@ -254,7 +256,7 @@
   }
 }
 @media screen and (min-width: $desktop-width) {
-  .header__logo {
+  .mini-header {
     margin-right: 93px;
   }
   .menu-open-btn {

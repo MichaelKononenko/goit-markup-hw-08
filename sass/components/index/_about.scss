@@ -16,6 +16,7 @@
     margin-bottom: 30px;
   }
   &__title {
+    text-align: center;
     font-size: 14px;
     line-height: 1.14;
     margin-bottom: 10px;
@@ -29,6 +30,9 @@
 }
 
 @media screen and (min-width: $tablet-width) {
+  .about__title {
+    text-align: left;
+  }
   .about__item {
     width: calc((100% - 30px) / 2);
   }

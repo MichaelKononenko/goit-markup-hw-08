@@ -6,7 +6,7 @@
   margin-left: auto;
   margin-right: auto;
   &__title {
-    font-size: 26px;
+    font-size: 18px;
     line-height: 1.62;
     margin: 0 auto 30px auto;
     font-weight: 900;
@@ -48,6 +48,11 @@
   .overlay {
     background-image: linear-gradient(to top, var(--hero-overlay-color), var(--hero-overlay-color)),
       url(../images/mobile-bg@2.jpg);
+  }
+}
+@media screen and (min-width: $mobile-width) {
+  .hero__title {
+    font-size: 26px;
   }
 }
 @media screen and (min-width: $tablet-width) {

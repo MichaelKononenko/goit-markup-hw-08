@@ -213,13 +213,15 @@ img {
   padding: 48px 25px;
   overflow-y: scroll;
   visibility: visible;
+  opacity: 1;
   transform: translateY(0);
   transition: transform var(--primary-transition-time) var(--primary-cubic-function);
 }
 
 .header-menu.is-hidden {
+  visibility: hidden;
   transform: translateY(-101%);
-  transition: transform var(--primary-transition-time) var(--primary-cubic-function), opacity var(--primary-transition-time) var(--primary-cubic-function);
+  transition: transform var(--primary-transition-time) var(--primary-cubic-function), visibility var(--primary-transition-time) var(--primary-cubic-function);
 }
 
 .site-nav__link {
@@ -409,7 +411,7 @@ img {
   }
 }
 @media screen and (min-width: 1200px) {
-  .header__logo {
+  .mini-header {
     margin-right: 93px;
   }
   .menu-open-btn {
@@ -601,6 +603,7 @@ img {
   }
   .address-join-wrapper {
     margin-right: auto;
+    margin-bottom: 0;
     align-items: baseline;
   }
   .address-wrapper {
@@ -634,7 +637,7 @@ img {
   margin-right: auto;
 }
 .hero__title {
-  font-size: 26px;
+  font-size: 18px;
   line-height: 1.62;
   margin: 0 auto 30px auto;
   font-weight: 900;
@@ -671,6 +674,11 @@ img {
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
   .overlay {
     background-image: linear-gradient(to top, var(--hero-overlay-color), var(--hero-overlay-color)), url(../images/mobile-bg@2.jpg);
+  }
+}
+@media screen and (min-width: 480px) {
+  .hero__title {
+    font-size: 26px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -721,6 +729,7 @@ img {
   margin-bottom: 30px;
 }
 .about__title {
+  text-align: center;
   font-size: 14px;
   line-height: 1.14;
   margin-bottom: 10px;
@@ -733,6 +742,9 @@ img {
 }
 
 @media screen and (min-width: 768px) {
+  .about__title {
+    text-align: left;
+  }
   .about__item {
     width: calc((100% - 30px) / 2);
   }
@@ -1210,6 +1222,7 @@ img {
   top: 0;
   width: 100%;
   height: 100%;
+  padding: 15px;
   overflow-y: scroll;
   transform: translateY(101%);
   transition: transform var(--primary-transition-time) var(--primary-cubic-function);
@@ -1245,6 +1258,7 @@ img {
 @media screen and (min-width: 480px) {
   .projects__description-wrapper {
     align-items: center;
+    padding: 0 24px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1253,6 +1267,7 @@ img {
   }
   .projects__description-wrapper {
     overflow-y: hidden;
+    padding: 0;
   }
 }
 @media screen and (min-width: 1200px) {
