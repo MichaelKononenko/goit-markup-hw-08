@@ -867,6 +867,9 @@ img {
   .team {
     padding: 94px 0;
   }
+  .team__list {
+    flex-wrap: nowrap;
+  }
   .team__title {
     margin-bottom: 50px;
     font-size: 36px;
