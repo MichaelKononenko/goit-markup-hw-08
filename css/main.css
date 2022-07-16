@@ -62,7 +62,7 @@ a {
 img {
   display: block;
   height: auto;
-  width: 100%;
+  max-width: 100%;
 }
 
 .list {
@@ -814,6 +814,7 @@ img {
   text-align: center;
 }
 .team__item {
+  flex-basis: 100%;
   padding-bottom: 30px;
   border-radius: 0px 0px 4px 4px;
   background-color: var(--primary-background-color);
@@ -863,12 +864,17 @@ img {
   fill: currentColor;
 }
 
+@media screen and (min-width: 768px) {
+  .team__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
 @media screen and (min-width: 1200px) {
   .team {
     padding: 94px 0;
   }
-  .team__list {
-    flex-wrap: nowrap;
+  .team__item {
+    flex-basis: calc((100% - 90px) / 4);
   }
   .team__title {
     margin-bottom: 50px;
@@ -891,7 +897,7 @@ img {
   gap: 30px;
 }
 .clients__item {
-  width: calc((100% - 30px) / 2);
+  flex-basis: calc((100% - 30px) / 2);
   height: 92px;
 }
 .clients__link {
@@ -916,12 +922,12 @@ img {
 
 @media screen and (min-width: 768px) {
   .clients__item {
-    width: calc((100% - 60px) / 3);
+    flex-basis: calc((100% - 60px) / 3);
   }
 }
 @media screen and (min-width: 1200px) {
   .clients__item {
-    width: calc((100% - 150px) / 6);
+    flex-basis: calc((100% - 150px) / 6);
   }
 }
 .is-hidden .modal {

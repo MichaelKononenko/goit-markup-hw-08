@@ -13,7 +13,7 @@
   }
 
   &__item {
-    width: calc((100% - 30px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
     height: 92px;
   }
   &__link {
@@ -44,11 +44,11 @@
 }
 @media screen and (min-width: $tablet-width) {
   .clients__item {
-    width: calc((100% - 60px) / 3);
+    flex-basis: calc((100% - 60px) / 3);
   }
 }
 @media screen and (min-width: $desktop-width) {
   .clients__item {
-    width: calc((100% - 150px) / 6);
+    flex-basis: calc((100% - 150px) / 6);
   }
 }
